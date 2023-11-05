@@ -1,0 +1,17 @@
+it\finalproject_lastversion\web\servlet\user\PrepareInsertUserServlet.class
+it\finalproject_lastversion\utils\EntityManagerUtil.class
+it\finalproject_lastversion\web\servlet\user\ExecuteInsertUserServlet.class
+it\finalproject_lastversion\web\servlet\auth\PrepareLoginServlet.class
+it\finalproject_lastversion\DAO\card\CardDAOImpl.class
+it\finalproject_lastversion\DAO\IBaseDAO.class
+it\finalproject_lastversion\DAO\user\UserDAO.class
+it\finalproject_lastversion\model\Transaction.class
+it\finalproject_lastversion\service\user\UserServiceImpl.class
+it\finalproject_lastversion\web\servlet\HomeServlet.class
+it\finalproject_lastversion\model\User.class
+it\finalproject_lastversion\DAO\card\CardDAO.class
+it\finalproject_lastversion\DAO\user\UserDAOImpl.class
+it\finalproject_lastversion\service\MyServiceFactory.class
+it\finalproject_lastversion\model\CreditCard.class
+it\finalproject_lastversion\service\user\UserService.class
+it\finalproject_lastversion\model\Role.class

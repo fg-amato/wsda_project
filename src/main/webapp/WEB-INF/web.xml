@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <description></description>
+    <display-name>PrepareLoginServlet</display-name>
+    <servlet-name>PrepareLoginServlet</servlet-name>
+    <servlet-class>it.finalproject_lastversion.web.servlet.PrepareLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PrepareLoginServlet</servlet-name>
+    <url-pattern>/PrepareLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PrepareInsertUserServlet</display-name>
+    <servlet-name>PrepareInsertUserServlet</servlet-name>
+    <servlet-class>it.finalproject_lastversion.web.servlet.admin.PrepareInsertUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PrepareInsertUserServlet</servlet-name>
+    <url-pattern>/PrepareInsertUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HomeServlet</display-name>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>it.finalproject_lastversion.web.servlet.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/HomeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ExecuteInsertUserServlet</display-name>
+    <servlet-name>ExecuteInsertUserServlet</servlet-name>
+    <servlet-class>it.finalproject_lastversion.web.servlet.admin.ExecuteInsertUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExecuteInsertUserServlet</servlet-name>
+    <url-pattern>/ExecuteInsertUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LocalEntityManagerFactory</display-name>
+    <servlet-name>LocalEntityManagerFactory</servlet-name>
+    <servlet-class>it.finalproject_lastversion.web.servlet.LocalEntityManagerFactory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LocalEntityManagerFactory</servlet-name>
+    <url-pattern>/LocalEntityManagerFactory</url-pattern>
+  </servlet-mapping>
+</web-app>

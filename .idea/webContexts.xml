@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/merchant/insertTransaction.jsp" value="file://$PROJECT_DIR$/src/main/webapp/merchant" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/merchant/listTransactions.jsp" value="file://$PROJECT_DIR$/src/main/webapp/merchant" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/navbar.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/public/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/public" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/user/lastOperations.jsp" value="file://$PROJECT_DIR$/src/main/webapp/user" />
+      </map>
+    </option>
+  </component>
+</project>
