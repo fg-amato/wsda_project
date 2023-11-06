@@ -9,7 +9,7 @@
   <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
-  <title>Lista Transazioni</title>
+  <title>Il tuo conto</title>
 </head>
 
 <body class="d-flex flex-column h-100">

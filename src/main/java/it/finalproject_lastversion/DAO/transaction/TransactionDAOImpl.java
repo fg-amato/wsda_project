@@ -103,7 +103,7 @@ public class TransactionDAOImpl implements TransactionDAO {
 
     @Override
     public List<Transaction> findAllCreatedButNotConfirmedTransactionsWithSpecifiedMerchant(String idMerchant) throws Exception {
-        TypedQuery<Transaction> query = entityManager.createQuery("select t FROM Transaction as t left join fetch t.card  as c left join fetch t.merchant where t.merchant.id = :idMerchant and t.transactionState=:transactionState",
+        TypedQuery<Transaction> query = entityManager.createQuery("select t FROM Transaction as t left join fetch t.card  as c left join fetch t.merchant where t.merchant.id = :idMerchant and t.transactionState=:transactionState order by t.dateTransaction desc",
                 Transaction.class);
         query.setParameter("idMerchant", idMerchant);
         query.setParameter("transactionState", TransactionState.STATE_CREATED);
@@ -112,7 +112,7 @@ public class TransactionDAOImpl implements TransactionDAO {
 
     @Override
     public List<Transaction> findLastFiveConfirmedTransactionWithMerchantByCardId(String idCard) throws Exception {
-        TypedQuery<Transaction> query = entityManager.createQuery("select t FROM Transaction as t left join fetch t.card as c left join fetch t.merchant where t.card.id = :idCard and t.transactionState=:transactionState order by t.dateTransaction limit 5",
+        TypedQuery<Transaction> query = entityManager.createQuery("select t FROM Transaction as t left join fetch t.card as c left join fetch t.merchant where t.card.id = :idCard and t.transactionState=:transactionState order by t.dateTransaction desc limit 5",
                 Transaction.class);
         query.setParameter("idCard", idCard);
         query.setParameter("transactionState", TransactionState.STATE_CONFIRMED);
