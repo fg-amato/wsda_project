@@ -41,6 +41,7 @@ public class CheckAuthFilter implements Filter {
         UserDTO utenteInSession = (UserDTO) httpRequest.getSession().getAttribute("userInfo");
         // intanto verifico se utente in sessione
         if (utenteInSession == null) {
+            httpRequest.setAttribute("errorMessage", "Effettua il login prima");
             httpResponse.sendRedirect(httpRequest.getContextPath());
             return;
         }
