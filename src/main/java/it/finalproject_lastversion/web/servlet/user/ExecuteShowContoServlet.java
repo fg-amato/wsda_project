@@ -33,14 +33,8 @@ public class ExecuteShowContoServlet extends HttpServlet {
         try{
             CreditCard userCard = MyServiceFactory.getCardServiceInstance().trovaPerIdTitolareCarta(idUserParam);
             List<Transaction> transactionList = MyServiceFactory.getTransactionServiceInstance().trovaLeUltimeCinqueOperazioniConIdCarta(userCard.getId());
-            for (Transaction element: transactionList) {
-                System.out.println(element.getDateTransaction());
-            }
             List<TransactionDTO> toSend = TransactionDTO.createTransactionDTOListFromListWithoutCardHolders(transactionList);
             //mando in pagina la card senza info sullo user, poiché lo user info è lo stesso titolare della carta
-            for (TransactionDTO element: toSend) {
-                System.out.println(element.getDateTransaction());
-            }
             request.setAttribute("userCard", CreditCardDTO.createCardDTOFromModelWithoutTransactionsAndUser(userCard));
             request.setAttribute("transactionUserList", toSend);
             request.getRequestDispatcher("showConto.jsp").forward(request, response);
