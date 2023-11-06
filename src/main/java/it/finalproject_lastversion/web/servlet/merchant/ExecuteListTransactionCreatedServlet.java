@@ -28,7 +28,7 @@ public class ExecuteListTransactionCreatedServlet extends HttpServlet {
 
         try{
             List<Transaction> transactionList = MyServiceFactory.getTransactionServiceInstance().ricercaTutteLeTransazioniCreateConIdMerchant(idMerchantParam);
-            List<TransactionDTO> toSend = new ArrayList<>(TransactionDTO.createTransactionDTOSetFromListWithoutCardHolders(transactionList));
+            List<TransactionDTO> toSend = TransactionDTO.createTransactionDTOListFromListWithoutCardHolders(transactionList);
             request.setAttribute("transactionCreatedList", toSend);
             request.getRequestDispatcher("listTransactions.jsp").forward(request, response);
         }catch (Exception e){

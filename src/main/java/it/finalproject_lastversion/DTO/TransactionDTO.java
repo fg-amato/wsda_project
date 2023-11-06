@@ -4,10 +4,7 @@ import it.finalproject_lastversion.model.Transaction;
 import it.finalproject_lastversion.model.TransactionState;
 
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class TransactionDTO {
 
@@ -114,6 +111,14 @@ public class TransactionDTO {
     }
     public static Set<TransactionDTO> createTransactionDTOSetFromListWithoutCardHolders(List<Transaction> list){
         Set<TransactionDTO> toReturn = new HashSet<>();
+        for(Transaction transactionElement : list){
+            toReturn.add(TransactionDTO.createTransactionDTOFromModelWithoutCardHolders(transactionElement));
+        }
+        return toReturn;
+    }
+
+    public static List<TransactionDTO> createTransactionDTOListFromListWithoutCardHolders(List<Transaction> list){
+        List<TransactionDTO> toReturn = new ArrayList<>();
         for(Transaction transactionElement : list){
             toReturn.add(TransactionDTO.createTransactionDTOFromModelWithoutCardHolders(transactionElement));
         }
